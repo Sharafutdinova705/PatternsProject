@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		528191B822182A0300054D07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191B722182A0300054D07 /* AppDelegate.swift */; };
+		528191BA22182A0300054D07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191B922182A0300054D07 /* ViewController.swift */; };
+		528191BD22182A0400054D07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528191BB22182A0400054D07 /* Main.storyboard */; };
+		528191BF22182A0800054D07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528191BE22182A0800054D07 /* Assets.xcassets */; };
+		528191C222182A0900054D07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528191C022182A0900054D07 /* LaunchScreen.storyboard */; };
+		528191CD2219B8A400054D07 /* MVPViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191CC2219B8A400054D07 /* MVPViewInput.swift */; };
+		528191CF2219B8B400054D07 /* MVPViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191CE2219B8B400054D07 /* MVPViewOutput.swift */; };
+		528191D12219BAC100054D07 /* MVPPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191D02219BAC100054D07 /* MVPPresenter.swift */; };
+		528191D32219CAB800054D07 /* MVPModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191D22219CAB800054D07 /* MVPModuleConfigurator.swift */; };
+		528191D72219D8D300054D07 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191D62219D8D300054D07 /* Operations.swift */; };
+		528191E92219F34500054D07 /* VIPERViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191E82219F34500054D07 /* VIPERViewOutput.swift */; };
+		528191EB2219F36900054D07 /* VIPERViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191EA2219F36900054D07 /* VIPERViewInput.swift */; };
+		528191ED2219F39000054D07 /* VIPERViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191EC2219F39000054D07 /* VIPERViewController.swift */; };
+		528191EF2219F3A000054D07 /* VIPERPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191EE2219F3A000054D07 /* VIPERPresenter.swift */; };
+		528191F12219F3B400054D07 /* VIPERInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191F02219F3B400054D07 /* VIPERInteractor.swift */; };
+		528191F32219F48E00054D07 /* VIPERInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191F22219F48E00054D07 /* VIPERInteractorInput.swift */; };
+		528191F52219F49600054D07 /* VIPERInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191F42219F49600054D07 /* VIPERInteractorOutput.swift */; };
+		528191F72219F4A600054D07 /* VIPERRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191F62219F4A600054D07 /* VIPERRouter.swift */; };
+		528191F92219F4B000054D07 /* VIPERRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191F82219F4B000054D07 /* VIPERRouterInput.swift */; };
+		528191FB2219F69400054D07 /* Storyboard2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528191FA2219F69400054D07 /* Storyboard2.storyboard */; };
+		528191FD2219F9E800054D07 /* VIPERModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191FC2219F9E800054D07 /* VIPERModuleConfigurator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		528191B422182A0300054D07 /* CalculatorProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculatorProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		528191B722182A0300054D07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		528191B922182A0300054D07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		528191BC22182A0400054D07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		528191BE22182A0800054D07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		528191C122182A0900054D07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		528191C322182A0900054D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		528191CC2219B8A400054D07 /* MVPViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPViewInput.swift; sourceTree = "<group>"; };
+		528191CE2219B8B400054D07 /* MVPViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPViewOutput.swift; sourceTree = "<group>"; };
+		528191D02219BAC100054D07 /* MVPPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPPresenter.swift; sourceTree = "<group>"; };
+		528191D22219CAB800054D07 /* MVPModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPModuleConfigurator.swift; sourceTree = "<group>"; };
+		528191D62219D8D300054D07 /* Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
+		528191E82219F34500054D07 /* VIPERViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERViewOutput.swift; sourceTree = "<group>"; };
+		528191EA2219F36900054D07 /* VIPERViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERViewInput.swift; sourceTree = "<group>"; };
+		528191EC2219F39000054D07 /* VIPERViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERViewController.swift; sourceTree = "<group>"; };
+		528191EE2219F3A000054D07 /* VIPERPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERPresenter.swift; sourceTree = "<group>"; };
+		528191F02219F3B400054D07 /* VIPERInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERInteractor.swift; sourceTree = "<group>"; };
+		528191F22219F48E00054D07 /* VIPERInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERInteractorInput.swift; sourceTree = "<group>"; };
+		528191F42219F49600054D07 /* VIPERInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERInteractorOutput.swift; sourceTree = "<group>"; };
+		528191F62219F4A600054D07 /* VIPERRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERRouter.swift; sourceTree = "<group>"; };
+		528191F82219F4B000054D07 /* VIPERRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERRouterInput.swift; sourceTree = "<group>"; };
+		528191FA2219F69400054D07 /* Storyboard2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard2.storyboard; sourceTree = "<group>"; };
+		528191FC2219F9E800054D07 /* VIPERModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERModuleConfigurator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		528191B122182A0300054D07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		528191AB22182A0300054D07 = {
+			isa = PBXGroup;
+			children = (
+				528191B622182A0300054D07 /* CalculatorProject */,
+				528191B522182A0300054D07 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		528191B522182A0300054D07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				528191B422182A0300054D07 /* CalculatorProject.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		528191B622182A0300054D07 /* CalculatorProject */ = {
+			isa = PBXGroup;
+			children = (
+				528191B722182A0300054D07 /* AppDelegate.swift */,
+				528191D62219D8D300054D07 /* Operations.swift */,
+				528191E32219F2EE00054D07 /* viper */,
+				528191C92219B7E700054D07 /* mvp */,
+				528191BE22182A0800054D07 /* Assets.xcassets */,
+				528191C022182A0900054D07 /* LaunchScreen.storyboard */,
+				528191C322182A0900054D07 /* Info.plist */,
+			);
+			path = CalculatorProject;
+			sourceTree = "<group>";
+		};
+		528191C92219B7E700054D07 /* mvp */ = {
+			isa = PBXGroup;
+			children = (
+				528191CB2219B85600054D07 /* presenter */,
+				528191CA2219B84D00054D07 /* view */,
+				528191BB22182A0400054D07 /* Main.storyboard */,
+				528191D22219CAB800054D07 /* MVPModuleConfigurator.swift */,
+			);
+			path = mvp;
+			sourceTree = "<group>";
+		};
+		528191CA2219B84D00054D07 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				528191CC2219B8A400054D07 /* MVPViewInput.swift */,
+				528191CE2219B8B400054D07 /* MVPViewOutput.swift */,
+				528191B922182A0300054D07 /* ViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		528191CB2219B85600054D07 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				528191D02219BAC100054D07 /* MVPPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		528191E32219F2EE00054D07 /* viper */ = {
+			isa = PBXGroup;
+			children = (
+				528191E72219F31B00054D07 /* view */,
+				528191E62219F31600054D07 /* presenter */,
+				528191E52219F30A00054D07 /* interactor */,
+				528191E42219F2FB00054D07 /* router */,
+				528191FC2219F9E800054D07 /* VIPERModuleConfigurator.swift */,
+			);
+			path = viper;
+			sourceTree = "<group>";
+		};
+		528191E42219F2FB00054D07 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				528191F62219F4A600054D07 /* VIPERRouter.swift */,
+				528191F82219F4B000054D07 /* VIPERRouterInput.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		528191E52219F30A00054D07 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				528191F02219F3B400054D07 /* VIPERInteractor.swift */,
+				528191F22219F48E00054D07 /* VIPERInteractorInput.swift */,
+				528191F42219F49600054D07 /* VIPERInteractorOutput.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		528191E62219F31600054D07 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				528191EE2219F3A000054D07 /* VIPERPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		528191E72219F31B00054D07 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				528191E82219F34500054D07 /* VIPERViewOutput.swift */,
+				528191EA2219F36900054D07 /* VIPERViewInput.swift */,
+				528191EC2219F39000054D07 /* VIPERViewController.swift */,
+				528191FA2219F69400054D07 /* Storyboard2.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		528191B322182A0300054D07 /* CalculatorProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 528191C622182A0900054D07 /* Build configuration list for PBXNativeTarget "CalculatorProject" */;
+			buildPhases = (
+				528191B022182A0300054D07 /* Sources */,
+				528191B122182A0300054D07 /* Frameworks */,
+				528191B222182A0300054D07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CalculatorProject;
+			productName = CalculatorProject;
+			productReference = 528191B422182A0300054D07 /* CalculatorProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		528191AC22182A0300054D07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Гузель";
+				TargetAttributes = {
+					528191B322182A0300054D07 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 528191AF22182A0300054D07 /* Build configuration list for PBXProject "CalculatorProject" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 528191AB22182A0300054D07;
+			productRefGroup = 528191B522182A0300054D07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				528191B322182A0300054D07 /* CalculatorProject */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		528191B222182A0300054D07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528191FB2219F69400054D07 /* Storyboard2.storyboard in Resources */,
+				528191C222182A0900054D07 /* LaunchScreen.storyboard in Resources */,
+				528191BF22182A0800054D07 /* Assets.xcassets in Resources */,
+				528191BD22182A0400054D07 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		528191B022182A0300054D07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528191F52219F49600054D07 /* VIPERInteractorOutput.swift in Sources */,
+				528191D12219BAC100054D07 /* MVPPresenter.swift in Sources */,
+				528191EF2219F3A000054D07 /* VIPERPresenter.swift in Sources */,
+				528191BA22182A0300054D07 /* ViewController.swift in Sources */,
+				528191E92219F34500054D07 /* VIPERViewOutput.swift in Sources */,
+				528191D32219CAB800054D07 /* MVPModuleConfigurator.swift in Sources */,
+				528191F12219F3B400054D07 /* VIPERInteractor.swift in Sources */,
+				528191D72219D8D300054D07 /* Operations.swift in Sources */,
+				528191F92219F4B000054D07 /* VIPERRouterInput.swift in Sources */,
+				528191FD2219F9E800054D07 /* VIPERModuleConfigurator.swift in Sources */,
+				528191F72219F4A600054D07 /* VIPERRouter.swift in Sources */,
+				528191ED2219F39000054D07 /* VIPERViewController.swift in Sources */,
+				528191EB2219F36900054D07 /* VIPERViewInput.swift in Sources */,
+				528191CF2219B8B400054D07 /* MVPViewOutput.swift in Sources */,
+				528191B822182A0300054D07 /* AppDelegate.swift in Sources */,
+				528191CD2219B8A400054D07 /* MVPViewInput.swift in Sources */,
+				528191F32219F48E00054D07 /* VIPERInteractorInput.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		528191BB22182A0400054D07 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528191BC22182A0400054D07 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		528191C022182A0900054D07 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528191C122182A0900054D07 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		528191C422182A0900054D07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		528191C522182A0900054D07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		528191C722182A0900054D07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CalculatorProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Desktop.product1.CalculatorProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		528191C822182A0900054D07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CalculatorProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Desktop.product1.CalculatorProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		528191AF22182A0300054D07 /* Build configuration list for PBXProject "CalculatorProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528191C422182A0900054D07 /* Debug */,
+				528191C522182A0900054D07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		528191C622182A0900054D07 /* Build configuration list for PBXNativeTarget "CalculatorProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528191C722182A0900054D07 /* Debug */,
+				528191C822182A0900054D07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 528191AC22182A0300054D07 /* Project object */;
+}
