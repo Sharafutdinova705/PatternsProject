@@ -10,7 +10,6 @@ import UIKit
 
 class VIPERViewController: UIViewController, VIPERViewInput {
     
-    var numberOnScreen:Double = 0
     var presenter: VIPERViewOutput!
     
     @IBOutlet weak var textLabel: UILabel!
@@ -19,17 +18,26 @@ class VIPERViewController: UIViewController, VIPERViewInput {
         super.viewDidLoad()
     }
     
+    /// Показать На экране текст, который придет (вычисления/ цифры)
+    ///
+    /// - Parameter text: какие-либо вычисления/ цифры
     func showTextLabel(_ text: String?) {
         
         textLabel.text = text
     }
     
+    /// Срабатывает при нажатии на мат.операцию
+    ///
+    /// - Parameter sender: sender типа UIButton
     @IBAction func operationButtons(_ sender: UIButton) {
         
         let operationPressedTag = String(sender.tag)
         presenter.operationPressedButton(operationPressedTag)
     }
     
+    /// Срабатывает при нажатии на цифру
+    ///
+    /// - Parameter sender: sender типа UIButton
     @IBAction func numberButtons(_ sender: UIButton) {
         
         let numberPressed = String(sender.tag - 1)

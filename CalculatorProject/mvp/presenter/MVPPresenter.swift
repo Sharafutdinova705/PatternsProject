@@ -17,6 +17,7 @@ class MVPPresenter: MVPViewOutput {
     var allSecondNumber = ""
     var operation = ""
     var hasDot = false
+    var hasDot2 = false
     
     func numberPressedButton(_ number: String?) {
         
@@ -30,23 +31,21 @@ class MVPPresenter: MVPViewOutput {
             view.showTextLabel(allSecondNumber)
         } else {
             
-            view.showAlert("Enter the first number, then operation, then second number.")
+            view.showAlert("Сначала введите 1-е число, затем операцию и затем 2-е число.")
         }
     }
     
     func operationPressedButton(_ number: String?) {
         
+        if number == "11" {
+            clear()
+            return
+        }
+        
         if allFirstNumber != "" {
             
             switch number {
                 
-            case "11":
-                
-                operation = ""
-                allFirstNumber = ""
-                allSecondNumber = ""
-                hasDot = false
-                view.showTextLabel(allFirstNumber)
             case "13":
                 
                 operation = ""
@@ -67,12 +66,12 @@ class MVPPresenter: MVPViewOutput {
                         
                         view.showAlert("Нельзя поставить точку")
                     }
-                } else {
+                } else if operation != "" && hasDot2 == false {
                     
                     if allSecondNumber.count < maxCountOfNumber - 1 {
                         
                         allSecondNumber += "."
-                        view.showTextLabel(allFirstNumber)
+                        view.showTextLabel(allSecondNumber)
                         hasDot = true
                     } else {
                         
@@ -104,15 +103,24 @@ class MVPPresenter: MVPViewOutput {
                 }
             default:
                 
-                operation = number!
-                view.showTextLabel("")
+                if number != "11" {
+                    
+                    operation = number!
+                    view.showTextLabel("")
+                }
             }
         } else {
             
-            view.showAlert("First of all enter number")
+            view.showAlert("Сначала введите первое число.")
         }
     }
     
+    /// Метод для кнопки равно
+    ///
+    /// - Parameters:
+    ///   - first: первое значение
+    ///   - second: второе значение
+    ///   - operation: тег операции
     func equals(_ first: String, _ second: String, _ operation: String) {
         
         switch operation {
@@ -147,5 +155,15 @@ class MVPPresenter: MVPViewOutput {
         allFirstNumber = ""
         allSecondNumber = ""
         hasDot = false
+    }
+    
+    /// Почистить экран
+    func clear() {
+        operation = ""
+        allFirstNumber = ""
+        allSecondNumber = ""
+        hasDot = false
+        hasDot2 = false
+        view.showTextLabel(allSecondNumber)
     }
 }

@@ -10,6 +10,9 @@ import Foundation
 
 protocol VIPERViewInput: AnyObject {
     
+    /// Показать какие-либо вычисления на экране
+    ///
+    /// - Parameter text: вычисления/цифры
     func showTextLabel(_ text: String?)
 }
 

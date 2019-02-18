@@ -10,47 +10,51 @@ import Foundation
 
 protocol OperationsProtocol {
         
-        /// summ of two values
+        /// Суммирует два значения
         ///
         /// - Parameters:
-        ///   - firstValue: first sum value
-        ///   - memoryValue: second some value
-        /// - Returns: result of operation at string type
+        ///   - firstValue: первое значение
+        ///   - memoryValue: Второе значение
+        /// - Returns: возвращает результат в типе String
         func adding(_ firstValue: Double,_ secondValue: Double) -> String
         
-        /// difference of two values
+        /// Разность двух значений
         ///
         /// - Parameters:
-        ///   - firstValue: first difference value
-        ///   - memoryValue: second differnce value
-        /// - Returns: result of operation at string type
+        ///   - firstValue: первое значение
+        ///   - memoryValue: второе значение
+        /// - Returns: возвращает результат в типе String
         func minusing(_ firstValue: Double,_ secondValue: Double) -> String
         
-        /// multiply of two values
+        /// Умножение двух значений
         ///
         /// - Parameters:
-        ///   - firstValue: first multiplaying value
-        ///   - memoryValue: second multiplaying value
-        /// - Returns: result of operation at string type
+        ///   - firstValue: первое значение
+        ///   - memoryValue: второе значение
+        /// - Returns: возвращает результат в типе String
         func multiplying(_ firstValue: Double,_ secondValue: Double) -> String
         
-        /// devide two values
+        /// Деление одного значения на другое
         ///
         /// - Parameters:
-        ///   - firstValue: first devide value
-        ///   - memoryValue: second devide value
-        /// - Returns: result of operation at string type
+        ///   - firstValue: первое значение
+        ///   - memoryValue: второе значение
+        /// - Returns: возвращает результат в типе String
         func dividing(_ firstValue: Double,_ secondValue: Double) -> String
-        
-        /// set value in some pow
+    
+        /// Возводит одно значение в степень равное другому значению
         ///
         /// - Parameters:
-        ///   - firstValue: first  value
-        ///   - memoryValue: second  value of pow
-        /// - Returns: result of operation at string type
+        ///   - firstValue: перве значение
+        ///   - memoryValue: второе значение
+        /// - Returns: возвращает результат в типе String
         func powing(_ firstValue: Double,_ secondValue: Double) -> String
 
-    func percent(_ firstValue: Double) -> String
+        /// Выдает процент от числа
+        ///
+        /// - Parameter firstValue: значение, из которого нужно взять процент
+        /// - Returns: возвращает результат в типе String
+        func percent(_ firstValue: Double) -> String
 }
     
 class Operations: OperationsProtocol {

@@ -10,15 +10,15 @@ import Foundation
 
 class VIPERInteractor: VIPERInteractorInput {
     
-    
     weak var view: VIPERInteractorOutput!
     weak var output: VIPERInteractorOutput!
     var operationManager: OperationsProtocol!
     var allFirstNumber = ""
-    let maxCountOfNumber = 9
     var allSecondNumber = ""
     var operation = ""
     var hasDot = false
+    var hasDot2 = false
+    let maxCountOfNumber = 9
     
     func numberPressedButton(_ number: String?) {
         
@@ -32,23 +32,22 @@ class VIPERInteractor: VIPERInteractorInput {
             view.showTextLabel(allSecondNumber)
         } else {
             
-            output.CallAlert("Enter the first number, then operation, then second number.")
+            output.CallAlert("Сначала введите 1-е число, затем операцию и затем 2-е число.")
         }
     }
     
     func operationPressedButton(_ number: String?) {
         
+        if number == "11" {
+            
+            clear()
+            return
+        }
+        
         if allFirstNumber != "" {
             
             switch number {
-                
-            case "11":
-                
-                operation = ""
-                allFirstNumber = ""
-                allSecondNumber = ""
-                hasDot = false
-                view.showTextLabel(allFirstNumber)
+            
             case "13":
                 
                 operation = ""
@@ -69,12 +68,12 @@ class VIPERInteractor: VIPERInteractorInput {
                         
                         output.CallAlert("Нельзя поставить точку")
                     }
-                } else {
+                } else if operation != "" && hasDot2 == false {
                     
                     if allSecondNumber.count < maxCountOfNumber - 1 {
                         
                         allSecondNumber += "."
-                        view.showTextLabel(allFirstNumber)
+                        view.showTextLabel(allSecondNumber)
                         hasDot = true
                     } else {
                         
@@ -106,15 +105,24 @@ class VIPERInteractor: VIPERInteractorInput {
                 }
             default:
                 
-                operation = number!
-                view.showTextLabel("")
+                if number != "11" {
+                    
+                    operation = number!
+                    view.showTextLabel("")
+                }
             }
         } else {
             
-            output.CallAlert("First of all enter number")
+            output.CallAlert("Сначала введите первое число.")
         }
     }
     
+    /// При нажатии на равно
+    ///
+    /// - Parameters:
+    ///   - first: первое значение
+    ///   - second: второе значение
+    ///   - operation: тег той операции, которая произошла
     func equals(_ first: String, _ second: String, _ operation: String) {
         
         switch operation {
@@ -150,5 +158,15 @@ class VIPERInteractor: VIPERInteractorInput {
         allSecondNumber = ""
         hasDot = false
     }
-
+    
+    /// Удаление с экрана все числа
+    func clear() {
+        
+        operation = ""
+        allFirstNumber = ""
+        allSecondNumber = ""
+        hasDot = false
+        hasDot2 = false
+        view.showTextLabel(allSecondNumber)
+    }
 }

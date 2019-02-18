@@ -25,15 +25,16 @@ class VIPERModuleConfigurator: NSObject {
         let presenter = VIPERPresenter()
         let interactor = VIPERInteractor()
         let router = VIPERRouter()
+        let operations: OperationsProtocol = Operations()
         
         view.presenter = presenter
         
         presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
-        
         interactor.output = presenter
-        
+        interactor.operationManager = operations
+        interactor.view = presenter
         router.view = view
     }
 }

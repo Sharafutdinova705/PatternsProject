@@ -10,5 +10,8 @@ import Foundation
 
 protocol VIPERRouterInput: AnyObject {
     
+    /// Показать алерт
+    ///
+    /// - Parameter message: Текст, который нужно показать в алерте
     func showAlert(_ message: String?)
 }

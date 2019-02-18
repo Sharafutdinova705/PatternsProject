@@ -134,6 +134,7 @@
 				528191E52219F30A00054D07 /* interactor */,
 				528191E42219F2FB00054D07 /* router */,
 				528191FC2219F9E800054D07 /* VIPERModuleConfigurator.swift */,
+				528191FA2219F69400054D07 /* Storyboard2.storyboard */,
 			);
 			path = viper;
 			sourceTree = "<group>";
@@ -171,7 +172,6 @@
 				528191E82219F34500054D07 /* VIPERViewOutput.swift */,
 				528191EA2219F36900054D07 /* VIPERViewInput.swift */,
 				528191EC2219F39000054D07 /* VIPERViewController.swift */,
-				528191FA2219F69400054D07 /* Storyboard2.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
