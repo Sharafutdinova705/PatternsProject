@@ -14,10 +14,19 @@ class VIPERPresenter: VIPERViewOutput, VIPERInteractorOutput {
     var router: VIPERRouterInput!
     var interactor: VIPERInteractorInput!
     
+    func handleData(_ text: String, isError: Bool) {
+        
+        if isError {
+            callAlert(text)
+        } else {
+            showTextLabel(text)
+        }
+    }
+    
     /// Показывает алерт с текстом, который приходит
     ///
     /// - Parameter text: текст для алерта
-    func CallAlert(_ text: String?) {
+    func callAlert(_ text: String?) {
         
         router.showAlert(text)
     }

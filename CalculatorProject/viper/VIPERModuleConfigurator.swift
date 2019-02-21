@@ -22,17 +22,17 @@ class VIPERModuleConfigurator: NSObject {
         
         guard let view = viewController as? VIPERViewController else { fatalError() }
         
+        let dataManager = DataManager()
         let presenter = VIPERPresenter()
         let interactor = VIPERInteractor()
         let router = VIPERRouter()
         let operations: OperationsProtocol = Operations()
         
         view.presenter = presenter
-        
+        interactor.dataManager = dataManager
         presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
-        interactor.output = presenter
         interactor.operationManager = operations
         interactor.view = presenter
         router.view = view

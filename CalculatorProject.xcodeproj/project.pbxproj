@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52712F8B221E920E001C583F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52712F8A221E920E001C583F /* DataManager.swift */; };
 		528191B822182A0300054D07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191B722182A0300054D07 /* AppDelegate.swift */; };
 		528191BA22182A0300054D07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528191B922182A0300054D07 /* ViewController.swift */; };
 		528191BD22182A0400054D07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528191BB22182A0400054D07 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52712F8A221E920E001C583F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		528191B422182A0300054D07 /* CalculatorProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculatorProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		528191B722182A0300054D07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		528191B922182A0300054D07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				528191B722182A0300054D07 /* AppDelegate.swift */,
+				52712F8A221E920E001C583F /* DataManager.swift */,
 				528191D62219D8D300054D07 /* Operations.swift */,
 				528191E32219F2EE00054D07 /* viper */,
 				528191C92219B7E700054D07 /* mvp */,
@@ -255,6 +258,7 @@
 				528191E92219F34500054D07 /* VIPERViewOutput.swift in Sources */,
 				528191D32219CAB800054D07 /* MVPModuleConfigurator.swift in Sources */,
 				528191F12219F3B400054D07 /* VIPERInteractor.swift in Sources */,
+				52712F8B221E920E001C583F /* DataManager.swift in Sources */,
 				528191D72219D8D300054D07 /* Operations.swift in Sources */,
 				528191F92219F4B000054D07 /* VIPERRouterInput.swift in Sources */,
 				528191FD2219F9E800054D07 /* VIPERModuleConfigurator.swift in Sources */,

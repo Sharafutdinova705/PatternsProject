@@ -24,9 +24,10 @@ class MVPModuleConfigurator: NSObject {
         
         let presenter = MVPPresenter()
         let operations: OperationsProtocol = Operations()
+        let dataManager = DataManager()
         
         view.presenter = presenter
-        
+        presenter.dataManager = dataManager
         presenter.view = view
         presenter.operationManager = operations
     }

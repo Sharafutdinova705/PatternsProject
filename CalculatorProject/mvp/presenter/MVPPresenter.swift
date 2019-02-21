@@ -12,8 +12,10 @@ class MVPPresenter: MVPViewOutput {
     
     weak var view: MVPViewInput!
     var operationManager: OperationsProtocol!
+    var dataManager: DataManagerProtocol!
     var allFirstNumber = ""
     let maxCountOfNumber = 9
+    let dot = "."
     var allSecondNumber = ""
     var operation = ""
     var hasDot = false
@@ -21,97 +23,85 @@ class MVPPresenter: MVPViewOutput {
     
     func numberPressedButton(_ number: String?) {
         
-        if(allFirstNumber.count < maxCountOfNumber && operation == "") {
+        if(allFirstNumber.count < maxCountOfNumber && operation == (Helper._empty).rawValue) {
             
             allFirstNumber += number!
             view.showTextLabel(allFirstNumber)
-        } else if allSecondNumber.count < maxCountOfNumber && allFirstNumber != "" && operation != "" {
+        } else if allSecondNumber.count < maxCountOfNumber && allFirstNumber != (Helper._empty).rawValue && operation != (Helper._empty).rawValue {
             
             allSecondNumber += number!
             view.showTextLabel(allSecondNumber)
         } else {
             
-            view.showAlert("Сначала введите 1-е число, затем операцию и затем 2-е число.")
+            view.showAlert(dataManager.obtainErrorAlert())
         }
     }
     
     func operationPressedButton(_ number: String?) {
         
-        if number == "11" {
+        if number == (Helper._11).rawValue {
             clear()
             return
         }
         
-        if allFirstNumber != "" {
+        if allFirstNumber != (Helper._empty).rawValue {
             
             switch number {
                 
-            case "13":
+            case (Helper._13).rawValue:
                 
-                operation = ""
+                operation = (Helper._empty).rawValue
                 view.showTextLabel(operationManager.percent(Double(allFirstNumber)!))
-            case "18":
+            case (Helper._18).rawValue:
                 
                 equals(allFirstNumber, allSecondNumber, operation)
-            case "19":
+            case (Helper._19).rawValue:
                 
-                if operation == "" && hasDot == false {
+                if operation == (Helper._empty).rawValue && hasDot == false {
                     
                     if allFirstNumber.count < maxCountOfNumber - 1 {
                         
-                        allFirstNumber += "."
+                        allFirstNumber += dot
                         view.showTextLabel(allFirstNumber)
                         hasDot = true
                     } else {
                         
-                        view.showAlert("Нельзя поставить точку")
+                        view.showAlert(dataManager.obtainDotErrorAlert())
                     }
-                } else if operation != "" && hasDot2 == false {
+                } else if operation != (Helper._empty).rawValue && hasDot2 == false {
                     
                     if allSecondNumber.count < maxCountOfNumber - 1 {
                         
-                        allSecondNumber += "."
+                        allSecondNumber += dot
                         view.showTextLabel(allSecondNumber)
                         hasDot = true
                     } else {
                         
-                        view.showAlert("Нельзя поставить точку")
+                        view.showAlert(dataManager.obtainDotErrorAlert())
                     }
                 }
-            case "20":
+            case (Helper._20).rawValue:
                 
-                if operation == "" {
+                if operation == (Helper._empty).rawValue {
                     
-                    if Double(allFirstNumber)! < 0 {
-                        
-                        allFirstNumber = String(Double(allFirstNumber)! * -1)
-                    } else {
-                        
-                        allFirstNumber = "-" + allFirstNumber
-                    }
+                    allFirstNumber = String(Double(allFirstNumber)! * -1)
                     view.showTextLabel(allFirstNumber)
                 } else {
                     
-                    if Double(allSecondNumber)! < 0 {
-                        
-                        allSecondNumber = String(Double(allSecondNumber)! * -1)
-                    } else {
-                        
-                        allSecondNumber = "-" + allSecondNumber
-                    }
+                    allFirstNumber = String(Double(allFirstNumber)! * -1)
                     view.showTextLabel(allSecondNumber)
                 }
             default:
                 
-                if number != "11" {
+                if number != (Helper._11).rawValue {
                     
                     operation = number!
-                    view.showTextLabel("")
+                    view.showTextLabel((Helper._empty).rawValue)
                 }
             }
         } else {
             
-            view.showAlert("Сначала введите первое число.")
+            view.showAlert(dataManager.obtainErrorAlert())
         }
     }
     
@@ -125,43 +115,45 @@ class MVPPresenter: MVPViewOutput {
         
         switch operation {
             
-        case "12":
+        case (Helper._12).rawValue:
             
             view.showTextLabel(operationManager.powing(Double(first)!, Double(second)!))
-        case "13":
+        case (Helper._13).rawValue:
             
             view.showTextLabel(operationManager.powing(Double(first)!, Double(second)!))
-        case "14":
-        
+        case (Helper._14).rawValue:
+            
             view.showTextLabel(operationManager.dividing(Double(first)!, Double(second)!))
-        case "15":
+        case (Helper._15).rawValue:
+            
             view.showTextLabel(operationManager.multiplying(Double(first)!, Double(second)!))
-        case "16":
+        case (Helper._16).rawValue:
             
             view.showTextLabel(operationManager.minusing(Double(first)!, Double(second)!))
-        case "17":
+        case (Helper._17).rawValue:
             
             view.showTextLabel(operationManager.adding(Double(first)!, Double(second)!))
         default:
             
-            if operation == "" {
+            if operation == (Helper._empty).rawValue {
                 view.showTextLabel(allFirstNumber)
             } else {
                 view.showTextLabel(allSecondNumber)
             }
         }
         
-        self.operation = ""
-        allFirstNumber = ""
-        allSecondNumber = ""
+        self.operation = (Helper._empty).rawValue
+        allFirstNumber = (Helper._empty).rawValue
+        allSecondNumber = (Helper._empty).rawValue
         hasDot = false
     }
     
     /// Почистить экран
     func clear() {
-        operation = ""
-        allFirstNumber = ""
-        allSecondNumber = ""
+        
+        operation = (Helper._empty).rawValue
+        allFirstNumber = (Helper._empty).rawValue
+        allSecondNumber = (Helper._empty).rawValue
         hasDot = false
         hasDot2 = false
         view.showTextLabel(allSecondNumber)
